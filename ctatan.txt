@@ -1,0 +1,32 @@
+1. migrate: php artisan migrate (cd nama foder)
+
+   (composer update) untuk pertama memulai rombak apabila memakai bitly 
+
+2. (php artisan migrate:fresh --seed) >>untuk migrate dan seeder sekaligus
+   seeder: php artisan db:seed --class=WalasSeeder
+           php artisan db:seed --class=SiswaSeeder   
+           php artisan db:seed --class=KelasSeeder
+
+
+3. controller: a. php artisan make:Controller IndexControlle   use App\Models\Kelas;
+ 							       use App\Models\Siswa;
+							       use App\Models\Walas;
+							       use App\Models\Nilai;
+							       use Illuminate\Support\Facades\Hash;
+
+               b. php artisan make:Controller NilaiControllerr
+
+4. middelware: php artisan make:Middleware CheckUserRole
+
+5. kernel: 'CheckUserRole' => \App\Http\Middleware\CheckUserRole::class
+
+6. view: a. login.blade.php (file)
+ 
+         b. layout (folder) : main.blade.php
+
+         c. nilai (folder): crete.blade.php
+                            edit.blade.php
+		            show.blade.php
+		            index.blade.php
+ 
+menjalankan program : php artisan serve -> ctrl+klik 
